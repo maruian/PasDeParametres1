@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Finestra2 extends AppCompatActivity implements View.OnClickListener{
 
@@ -41,9 +42,14 @@ public class Finestra2 extends AppCompatActivity implements View.OnClickListener
         editEdat=(TextView)findViewById(R.id.editEdat);
         Intent resultat = new Intent();
         String auxEditEdat=editEdat.getText().toString();
-        resultat.putExtra("edat",auxEditEdat);
-        setResult(RESULT_OK, resultat);
-        finish();
+        try {
+            int edat = Integer.parseInt(auxEditEdat);
+            resultat.putExtra("edat",edat);
+            setResult(RESULT_OK, resultat);
+            finish();
+        } catch (NumberFormatException n){
+            Toast.makeText(this,"Deus introduir un valor correcte",Toast.LENGTH_LONG).show();
+        }
     }
 
 }

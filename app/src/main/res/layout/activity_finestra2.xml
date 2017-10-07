@@ -18,19 +18,12 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:layout_marginBottom="69dp"
+            android:layout_marginBottom="67dp"
             android:layout_above="@+id/botoContinuar"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edat:"
-            android:layout_alignBaseline="@+id/editEdat"
-            android:layout_alignBottom="@+id/editEdat"
-            android:layout_toLeftOf="@+id/textSenyor"
-            android:layout_toStartOf="@+id/textSenyor" />
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp" />
 
         <TextView
             android:id="@+id/textSenyor"
@@ -50,6 +43,18 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="187dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editEdat"
+            android:layout_alignBottom="@+id/editEdat"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:text="Edat:" />
 
 
     </RelativeLayout>

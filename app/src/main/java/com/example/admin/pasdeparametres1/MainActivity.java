@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 radioFemella.setEnabled(false);
                 radioMascle.setEnabled(false);
                 editNom.setEnabled(false);
-                escriuResultat(data.getStringExtra("edat"));
+                escriuResultat(data.getIntExtra("edat",0));
             }
         }
     }
 
-    public void escriuResultat(String strEdat){
-        int edat=Integer.parseInt(strEdat);
+
+    public void escriuResultat(int edat){
         textResultat=(TextView)findViewById(R.id.textResultat);
         if ((edat>=18)&&(edat<25)) {
             textResultat.setText("Ja eres major d'edat");
@@ -73,4 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
 }
+
+
