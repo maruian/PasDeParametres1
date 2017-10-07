@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.pasdeparametres1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom: "
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/editNom"
+            android:layout_alignBottom="@+id/editNom"
+            android:layout_toLeftOf="@+id/editNom"
+            android:layout_toStartOf="@+id/editNom" />
+
+        <EditText
+            android:id="@+id/editNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_marginBottom="29dp"
+            android:layout_above="@+id/botoEnviar"
+            android:layout_alignLeft="@+id/botoEnviar"
+            android:layout_alignStart="@+id/botoEnviar">
+
+            <RadioButton
+                android:id="@+id/radioFemella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/botoEnviar"
+                android:layout_alignLeft="@+id/radioMascle"
+                android:layout_alignStart="@+id/radioMascle"
+                android:layout_marginBottom="38dp"
+                android:layout_weight="1"
+                android:text="Femella" />
+
+            <RadioButton
+                android:id="@+id/radioMascle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/radioFemella"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/botoEnviar"
+                android:layout_toStartOf="@+id/botoEnviar"
+                android:layout_weight="1"
+                android:text="Mascle" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/botoEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Enviar" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe:"
+            tools:textSize="18sp"
+            android:layout_above="@+id/radioGroup"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textResultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/botoEnviar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
