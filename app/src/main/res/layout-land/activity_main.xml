@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/relative">
+
+        <TextView
+            android:id="@+id/textNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom: "
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/editNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Escriu el teu nom..."
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/textNom"
+            android:layout_alignBaseline="@id/textNom" />
+
+        <TextView
+            android:id="@+id/textSexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe:"
+            android:textSize="20dp"
+            android:layout_below="@id/editNom"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGrup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSexe"
+            >
+            <RadioButton
+                android:id="@+id/radioMascle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascle" />
+
+            <RadioButton
+                android:id="@+id/radioFemella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femella" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/botoEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGrup"
+            android:text="Enviar" />
+
+        <TextView
+            android:id="@+id/textResultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="36dp"
+            android:layout_below="@id/botoEnviar"/>
+
+</RelativeLayout>
+

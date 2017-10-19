@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -32,6 +31,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         radioFemella=(RadioButton) findViewById(R.id.radioFemella);
         radioMascle=(RadioButton)findViewById(R.id.radioMascle);
         botoEnviar.setOnClickListener(this);
+    }
+
+    public void onSaveInstanceState(Bundle b){
+        b.putCharSequence("nom",editNom.getText());
+        b.putBoolean("radioFemella",radioFemella.isChecked());
+        b.putBoolean("radioMascle",radioMascle.isChecked());
+    }
+
+    public void onRestoreInstanceState(Bundle b){
+        editNom.setText(b.getCharSequence("nom"));
+        radioFemella.setChecked(b.getBoolean("radioFemella"));
+        radioMascle.setChecked(b.getBoolean("radioMascle"));
     }
 
     public void onClick(View v){
